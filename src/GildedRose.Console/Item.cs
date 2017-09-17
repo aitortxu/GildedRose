@@ -20,15 +20,11 @@ namespace GildedRose.Console
         public int SellIn { get; set; }
 
         public int Quality { get; set; }
-
-        public void UpdateQuality()
-        {
-            this.qualityUpdateStrategy.UpdateQuality(this);
-        }
-
-        public void UpdateSellIn()
+        
+        public void UpdateStatus()
         {
             this.sellInUpdateStrategy.UpdateSellIn(this);
+            this.qualityUpdateStrategy.UpdateQuality(this);
         }
     }
 }

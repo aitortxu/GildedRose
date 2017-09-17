@@ -1,6 +1,6 @@
 ﻿namespace GildedRose.Console.QualityStrategies
 {
-    public class StandardQualityQualityUpdateStrategy : IQualityUpdateStrategy
+    public class StandardQualityUpdateStrategy : IQualityUpdateStrategy
     {
         public void UpdateQuality(Item item)
         {

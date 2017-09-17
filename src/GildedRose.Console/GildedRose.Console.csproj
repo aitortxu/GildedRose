@@ -44,14 +44,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="QualityStrategies\BackstageQualityUpdateStrategy.cs" />
+    <Compile Include="QualityStrategies\NoDecreaseQualityUpdateStrategy.cs" />
+    <Compile Include="QualityStrategies\IncreaseQualityUpdateStrategy.cs" />
     <Compile Include="SellInStrategies\ISellInUpdateStrategy.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="ItemsInventory.cs" />
     <Compile Include="QualityStrategies\IQualityUpdateStrategy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SellInStrategies\NoDecreaseSellInUpdateStrategy.cs" />
     <Compile Include="SellInStrategies\StandardSellInUpdateStrategy.cs" />
-    <Compile Include="QualityStrategies\StandardQualityQualityUpdateStrategy.cs" />
+    <Compile Include="QualityStrategies\StandardQualityUpdateStrategy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
