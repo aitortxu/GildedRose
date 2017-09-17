@@ -9,17 +9,16 @@ namespace GildedRose.Console
         {
             for (var i = 0; i < Items.Count; i++)
             {
-                if (Items[i].Name != "Aged Brie" && Items[i].Name != "Backstage passes to a TAFKAL80ETC concert")
+
+                // Normal upgrade (-1 as ti
+                if (Items[i].Name == "+5 Dexterity Vest" || Items[i].Name == "Elixir of the Mongoose" || Items[i].Name == "Conjured Mana Cake")
                 {
-                    if (Items[i].Quality > 0)
-                    {
-                        if (Items[i].Name != "Sulfuras, Hand of Ragnaros")
-                        {
-                            Items[i].Quality = Items[i].Quality - 1;
-                        }
-                    }
+                    this.Items[i].UpdateQuality();
+                    this.Items[i].UpdateSellIn();
+                    continue;
                 }
-                else
+
+                if (!(Items[i].Name != "Aged Brie" && Items[i].Name != "Backstage passes to a TAFKAL80ETC concert"))
                 {
                     if (Items[i].Quality < 50)
                     {
@@ -79,6 +78,6 @@ namespace GildedRose.Console
                     }
                 }
             }
-        }        
+        }
     }
 }
