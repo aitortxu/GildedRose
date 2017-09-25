@@ -1,19 +1,17 @@
-using System;
 using System.Collections.Generic;
 using Xunit;
 using GildedRose.Console;
+using FluentAssertions;
+using GildedRose.Console.QualityStrategies;
+using GildedRose.Console.SellInStrategies;
 
 namespace GildedRose.Tests
 {
-    using FluentAssertions;
 
-    using GildedRose.Console.QualityStrategies;
-    using GildedRose.Console.SellInStrategies;
-
-    public class TestAssemblyTests
+    public class QualityAndSellinEvolutionTests
     {
         [Fact]
-        public void TestTheValues_WhenOneDayPass()
+        public void TestTheValues_WhenOneDayPass_ShouldMatchTheExpectedValues()
         {
             var inventory = GetItemsInventory();
 
@@ -28,7 +26,7 @@ namespace GildedRose.Tests
         }
 
         [Fact]
-        public void TestTheValues_WhenTwentyDaysPass()
+        public void TestTheValues_WhenTwentyDaysPass_ShouldMatchTheExpectedValues()
         {
             var inventory = GetItemsInventory();
 
