@@ -30,7 +30,7 @@ namespace GildedRose.Tests
         {
             var inventory = GetItemsInventory();
 
-            for (int i = 1; i < 20; i++)
+            for (var daysPassed = 1; daysPassed < 20; daysPassed++)
             {
                 inventory.UpdateQuality();
 
